@@ -1,0 +1,21 @@
+{
+  "name": "ng-neer",
+  "version": "1.0.0",
+  "description": "calvin photos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/node-sass -w css/styles.scss css/styles.css & node_modules/.bin/serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "bootstrap": "^3.3.6",
+    "angular-animate": "^1.5.6",
+    "angular-touch": "^1.5.6"
+  },
+  "devDependencies": {
+
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ng-NEER</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-app='ng-neer'>
+    <div class="" ng-controller="HomeController">
+    <!-- slider container -->
+      <div class="container slider">
+
+          <!-- enumerate all photos -->
+          <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+
+          <!-- prev / next controls -->
+          <a class="arrow prev" href="#" ng-click="showPrev()"></a>
+          <a class="arrow next" href="#" ng-click="showNext()"></a>
+
+          <!-- extra navigation controls -->
+          <ul class="nav">
+              <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+                  <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+              </li>
+          </ul>
+
+      </div>
+
+
+    </div>
+
+    <script src="node_modules/angular/angular.js" charset="utf-8"></script>
+    <script src="node_modules/angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="node_modules/angular-animate/angular-animate.js" charset="utf-8"></script>
+    <script src="node_modules/angular-touch/angular-touch.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
