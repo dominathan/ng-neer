@@ -606,7 +606,7 @@
         {src:'https://lh4.googleusercontent.com/tTg4jnCUkG2Qbte1fe1wKwWf0fDWno8c00vi-wIZA4UUTv17FLjFEIC-h21JUK1LMcCqQw=w84-h63'},
         {src:'https://lh5.googleusercontent.com/zbMASUpXIKI3soqMxTVp5dtvNMY-gBWBia6glEce2pGLAWmdTlhDmtusxUZSWrvpcHzm-w=w84-h63'},
         {src:'https://lh6.googleusercontent.com/JGu0Qkbomr8mlEsHVpR0zMWoEmAtvKf4tTdap7dgag1wW8-_QcjoycY8KuBPaCDLhvBEIQ=w84-h63'},
-        {src:'https://lh5.googleusercontent.com/UvNofP1yePW9sdpWbIwkb2Kk5dmqG-kyJs0Pxh5BtE8yHExPImJCrvOz1GONlKRbxlQqVQ=w84-h63'}
+        {src:'https://lh5.googleusercontent.com/UvNofP1yePW9sdpWbIwkb2Kk5dmqG-kyJs0Pxh5BtE8yHExPImJCrvOz1GONlKRbxlQqVQ=w84-h63'},
       ];
 
       // initial image index

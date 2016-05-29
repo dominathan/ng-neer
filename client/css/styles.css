@@ -1,3 +1,10 @@
+header {
+  width: 100%;
+  background-color: #000;
+  text-align: center; }
+  header h1 {
+    color: azure; }
+
 img {
   position: relative;
   width: 66%;
