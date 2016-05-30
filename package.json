@@ -2,7 +2,7 @@
   "name": "ng-neer",
   "version": "1.0.0",
   "description": "calvin photos",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node_modules/.bin/node-sass -w client/css/styles.scss client/css/styles.css & node server.js"
   },

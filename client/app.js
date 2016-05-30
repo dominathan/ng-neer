@@ -5,7 +5,24 @@
       'ngRoute'
     ])
     .controller("HomeController", function($scope) {
-      $scope.hello = 'test';
+
+      $scope._Index = 0;
+
+      $scope.isActive = function (index) {
+          return $scope._Index === index;
+      };
+
+      $scope.showPrev = function () {
+          $scope._Index = ($scope._Index > 0) ? --$scope._Index : $scope.photos.length - 1;
+      };
+
+      $scope.showNext = function () {
+          $scope._Index = ($scope._Index < $scope.photos.length - 1) ? ++$scope._Index : 0;
+      };
+
+      $scope.showPhoto = function (index) {
+          $scope._Index = index;
+      };
 
       $scope.photos = [
         {src:'https://lh6.googleusercontent.com/ALS7RT2mEgoV326Bgk0t-PPdw-JHohSTQRB2dF9XUysh6eT3L652uzXW09wAi2n3YMrVUw=s500'},
@@ -609,28 +626,6 @@
         {src:'https://lh5.googleusercontent.com/UvNofP1yePW9sdpWbIwkb2Kk5dmqG-kyJs0Pxh5BtE8yHExPImJCrvOz1GONlKRbxlQqVQ=w500-h380'},
       ];
 
-      // initial image index
-      $scope._Index = 0;
-
-      // if a current image is the same as requested image
-      $scope.isActive = function (index) {
-          return $scope._Index === index;
-      };
-
-      // show prev image
-      $scope.showPrev = function () {
-          $scope._Index = ($scope._Index > 0) ? --$scope._Index : $scope.photos.length - 1;
-      };
-
-      // show next image
-      $scope.showNext = function () {
-          $scope._Index = ($scope._Index < $scope.photos.length - 1) ? ++$scope._Index : 0;
-      };
-
-      // show a certain image
-      $scope.showPhoto = function (index) {
-          $scope._Index = index;
-      };
 
   })
 
