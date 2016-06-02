@@ -1,9 +1,27 @@
 header {
   width: 100%;
   background-color: #000;
-  text-align: center; }
+  text-align: center;
+  text-align: right; }
   header h1 {
-    color: azure; }
+    color: azure;
+    display: inline-block; }
+  header ul {
+    text-align: right;
+    display: inline-block;
+    float: right;
+    padding-top: 1.7%;
+    padding-right: 1%;
+    width: 40%; }
+  header li {
+    display: inline-block;
+    font-size: 1.5em;
+    color: #fff;
+    padding-right: 2%; }
+
+.card {
+  border: 1px solid gray;
+  border-shadow: 7px 7px gray; }
 
 img {
   position: relative;

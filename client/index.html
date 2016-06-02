@@ -6,16 +6,19 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
   </head>
-  <body ng-app='ng-neer'>
-    <header class="navbar">
+  <body ng-app='ng-neer' ng-controller="HomeController">
+    <header class="navbar" >
       <nav>
         <h1>NG-NEER</h1>
+        <ul>
+          <li ng-cloak ng-click="toggleNotes()">{{currentLink}}</li>
+        </ul>
       </nav>
     </header>
-    <div class="" ng-controller="HomeController">
+    <div class="" >
 
     <!-- slider container -->
-      <div class="container slider">
+      <div ng-cloak class="container slider" ng-hide="notes">
 
           <!-- enumerate all photos -->
           <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
@@ -31,6 +34,75 @@
               </li>
           </ul>
 
+      </div>
+
+      <div class="container" ng-show="notes">
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[103].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">We'll Miss You</h4>
+            <p class="card-text">Great dude with a strong passion for helping and teaching. Keep doing good Calvin! -Keaton</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[100].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">We'll Miss You</h4>
+            <p class="card-text">Calvin,   You were such an awesome teacher and I know you inspired so many students to want to continue learning for the rest of their careers. I can't thank you enough for always inspiring our cohort when we were down and consistently telling us that we could do it! Best of luck in your new adventures!!!!  -Bailey</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[200].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">We'll Miss You</h4>
+            <p class="card-text">Wish you all the best Calvin! May you always be squishy! Thanks for everything! :) -Amber</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[03].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">We'll Miss You</h4>
+            <p class="card-text">Calvin,  I appreciate everything you've done for me in regards to referring me to TECHSOFT! The opportunity has been amazing and you've helped me achieve a long standing goal of mine. I hope that whatever it is that takes you away from TIY Charleston brings you great opportunity and I wish you the best of luck in your future endeavors! JUST DO IT!!  Kind regards,  Matt Brown Software Engineer TECHSOFT Inc</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[52].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">We'll Miss You</h4>
+            <p class="card-text">
+Congratulations on your move! I learned so much from you and wanted to thank you for helping me in my career switch to programming. You will be missed:)</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[42].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">We'll Miss You</h4>
+            <p class="card-text">Hi Calvin, I am sorry to hear you are leaving The Iron Yard. You will be missed. Sometimes we never know the impact that we have on others lives. I wanted you to know that you made a huge impact on my life. I wish you much luck and success in all your future endeavors.   Sincerely, Candace Cohen</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[95].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title text-center">We'll Miss You</h4>
+            <p class="card-text">
+Hey Calvin,  I never read these TIY new letters but I happen to read this one. Just wanted to wish you well in your future endeavors. I was thankful to have you as an instructor and enjoyed my time at TIY. Stay in touch! Jared Bilton Cohort 5</p>
+          </div>
+        </div>
+
+        <div class="card col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <img class="card-img-top" ng-src="{{photos[290].src}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">We'll Miss You</h4>
+            <p class="card-text">Calvin, you helped change my life and I will am forever grateful. Your passion for programming is contagious and I know you will have a great impact wherever you go. Love ya man! -Shawn Leberknight</p>
+          </div>
+        </div>
       </div>
 
 
