@@ -108,7 +108,8 @@ img {
   position: absolute;
   top: 0;
   left: 17%;
-  box-shadow: 7px 7px gainsboro; }
+  box-shadow: 7px 7px gainsboro;
+  z-index: 100; }
 
 .slide.ng-hide-add {
   opacity: 1;
