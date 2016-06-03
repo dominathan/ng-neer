@@ -5,7 +5,8 @@ header {
   text-align: right; }
   header h1 {
     color: azure;
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 3%; }
   header ul {
     text-align: right;
     display: inline-block;
